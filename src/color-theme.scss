@@ -7,18 +7,86 @@
 @include mat-core();
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
+
+$md-nbp: (
+    50 : #ede3e4,
+    100 : #d1babd,
+    200 : #b38c91,
+    300 : #945d64,
+    400 : #7d3b43,
+    500 : #661822,
+    600 : #5e151e,
+    700 : #531119,
+    800 : #490e14,
+    900 : #38080c,
+    A100 : #ff7078,
+    A200 : #ff3d47,
+    A400 : #ff0a17,
+    A700 : #f0000d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$md-nba: (
+    50 : #f9f9e7,
+    100 : #f0f0c2,
+    200 : #e6e699,
+    300 : #dbdb70,
+    400 : #d4d452,
+    500 : #cccc33,
+    600 : #c7c72e,
+    700 : #c0c027,
+    800 : #b9b920,
+    900 : #adad14,
+    A100 : #ffffe0,
+    A200 : #ffffad,
+    A400 : #ffff7a,
+    A700 : #ffff60,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$candy-app-primary: mat-palette($mat-indigo);
-$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$nb-app-primary: mat-palette($md-nbp);
+$nb-app-accent:  mat-palette($md-nba);
 
 // The warn palette is optional (defaults to red).
-$candy-app-warn:    mat-palette($mat-red);
+$nb-app-warn:    mat-palette($mat-amber, 800, 700, 900);
+$nb-app-background:  mat-palette($mat-brown, A100);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+$nb-app-theme: mat-light-theme($nb-app-primary, $nb-app-accent, $nb-app-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($candy-app-theme);
+@include angular-material-theme($nb-app-theme);
