@@ -5,7 +5,8 @@ import { StartPageComponent } from './start-page/start-page.component';
 // base line for new routes:
 // { path: '', component:  }
 const routes: Routes = [
-  { path: '', component:  StartPageComponent}
+  { path: '', redirectTo: '/willkommen', pathMatch: 'full' },
+  { path: 'willkommen', component:  StartPageComponent}
 ];
 
 @NgModule({
