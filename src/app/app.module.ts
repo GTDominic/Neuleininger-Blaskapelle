@@ -7,12 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './menu/menu.component';
 import { AppRoutingModule } from './app-routing.module';
 import { StartPageComponent } from './start-page/start-page.component';
+import { ProbenComponent } from './proben/proben.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    StartPageComponent
+    StartPageComponent,
+    ProbenComponent
   ],
   imports: [
     BrowserModule,
