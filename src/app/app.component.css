@@ -1,0 +1,10 @@
+.picture{
+  display: flex;
+  margin-top: 64px;
+}
+img{
+  max-width: 100%;
+}
+.spacer{
+  height: 200em;
+}
