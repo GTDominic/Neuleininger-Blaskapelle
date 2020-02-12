@@ -80,7 +80,7 @@ $nb-app-primary: mat-palette($md-nbp);
 $nb-app-accent:  mat-palette($md-nba);
 
 // The warn palette is optional (defaults to red).
-$nb-app-warn:    mat-palette($mat-amber, 800, 700, 900);
+$nb-app-warn:    mat-palette($md-nbp, A200);
 $nb-app-background:  mat-palette($mat-brown, A100);
 
 // Create the theme object (a Sass map containing all of the palettes).
