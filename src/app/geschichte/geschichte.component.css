@@ -4,3 +4,7 @@ table{
 td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
   padding: 5px;
 }
+
+td.mat-cell{
+  white-space: pre-wrap;
+}
