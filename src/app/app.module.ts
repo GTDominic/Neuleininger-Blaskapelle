@@ -8,13 +8,15 @@ import { MenuComponent } from './menu/menu.component';
 import { AppRoutingModule } from './app-routing.module';
 import { StartPageComponent } from './start-page/start-page.component';
 import { ProbenComponent } from './proben/proben.component';
+import { GeschichteComponent } from './geschichte/geschichte.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     StartPageComponent,
-    ProbenComponent
+    ProbenComponent,
+    GeschichteComponent
   ],
   imports: [
     BrowserModule,
