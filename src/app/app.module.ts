@@ -9,6 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { StartPageComponent } from './start-page/start-page.component';
 import { ProbenComponent } from './proben/proben.component';
 import { GeschichteComponent } from './geschichte/geschichte.component';
+import { AuftritteComponent } from './auftritte/auftritte.component';
+import { MusikerComponent } from './musiker/musiker.component';
+import { VorstandComponent } from './vorstand/vorstand.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { GeschichteComponent } from './geschichte/geschichte.component';
     MenuComponent,
     StartPageComponent,
     ProbenComponent,
-    GeschichteComponent
+    GeschichteComponent,
+    AuftritteComponent,
+    MusikerComponent,
+    VorstandComponent
   ],
   imports: [
     BrowserModule,
