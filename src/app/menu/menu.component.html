@@ -1,8 +1,11 @@
 <mat-toolbar color="primary">
   <button class="menu-button" mat-raised-button color="accent" [routerLink]="['/willkommen']" routerLinkActive="router-link-active" >Neuleininger Blaskapelle</button>
-  <button class="menu-button" mat-raised-button color="warn" [routerLink]="['/proben']" routerLinkActive="router-link-active" >Proben</button>
   <button class="menu-button" mat-raised-button color="warn" [matMenuTriggerFor]="vereinsmenu">Verein</button>
   <mat-menu #vereinsmenu="matMenu">
-    <button mat-menu-item>Test</button>
+    <button mat-menu-item [routerLink]="['/geschichte']" routerLinkActive="router-link-active" >Geschichte</button>
+    <button mat-menu-item [routerLink]="['/musiker']" routerLinkActive="router-link-active">Musiker</button> 
+    <button mat-menu-item [routerLink]="['/vorstand']" routerLinkActive="router-link-active">Vorstand</button> 
   </mat-menu>
+  <button class="menu-button" mat-raised-button color="warn" [routerLink]="['/proben']" routerLinkActive="router-link-active" >Proben</button>
+  <button class="menu-button" mat-raised-button color="warn" [routerLink]="['/auftritte']" routerLinkActive="router-link-active" >Auftritte</button>
 </mat-toolbar>
