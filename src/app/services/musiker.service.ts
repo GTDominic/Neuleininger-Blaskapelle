@@ -16,4 +16,8 @@ export class MusikerService {
     return this.http.get(`&{baseUrl}musiker/`);
   }
 
+  getInstrument() {
+    return this.http.get(`&{baseUrl}instrument/`);
+  }
+
 }
