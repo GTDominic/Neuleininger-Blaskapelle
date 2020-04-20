@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Config } from '../config';
-const config: Config = require('./path/to/config.json');
+const config = require('../config.json');
 
 const baseUrl = config.ServerUrl + '/api/';
 
@@ -13,11 +12,11 @@ export class MusikerService {
   constructor(private http: HttpClient) {}
 
   getMusiker() {
-    return this.http.get(`&{baseUrl}musiker/`);
+    return this.http.get(baseUrl + 'musiker');
   }
 
   getInstrument() {
-    return this.http.get(`&{baseUrl}instrument/`);
+    return this.http.get(baseUrl + 'instrument');
   }
 
 }
