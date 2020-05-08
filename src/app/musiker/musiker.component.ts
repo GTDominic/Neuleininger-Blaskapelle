@@ -8,8 +8,8 @@ import { MusikerService } from '../services/musiker.service';
 })
 export class MusikerComponent implements OnInit {
 
-  musiker: any;
-  instrument: any;
+  musikers: any;
+  instruments: any;
 
   constructor(private musikerService: MusikerService) { }
 
@@ -22,7 +22,7 @@ export class MusikerComponent implements OnInit {
     this.musikerService.getMusiker()
       .subscribe(
         data => {
-          this.musiker = data;
+          this.musikers = data;
           console.log(data);
         },
         error => {
@@ -34,7 +34,7 @@ export class MusikerComponent implements OnInit {
     this.musikerService.getInstrument()
       .subscribe(
         data => {
-          this.instrument = data;
+          this.instruments = data;
           console.log(data);
         },
         error => {
