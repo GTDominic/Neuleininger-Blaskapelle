@@ -10,11 +10,11 @@
                 <a
                     *ngFor="let musiker of musikers"
                 >
-                    <a 
+                    <li
                         *ngIf="musiker.instrumentid==instrument.id"
                     >
                         {{musiker.name}}
-                    </a>
+            </li>
                 </a>
             </td>
         </tr>
