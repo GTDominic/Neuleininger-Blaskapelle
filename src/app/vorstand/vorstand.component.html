@@ -1,1 +1,144 @@
-<p>vorstand works!</p>
+<div class="text absatz">
+    <table>
+        <tr>
+            <td>1. Vorsitzende</td>
+            <td>
+                <a
+                    *ngFor="let musiker of musikers"
+                >
+                    <li
+                        *ngIf="musiker.vorstandtype1==1 || musiker.vorstandtype2==1"
+                    >
+                        {{musiker.name}}
+                    </li>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>2. Vorsitzender</td>
+            <td>
+                <a
+                    *ngFor="let musiker of musikers"
+                >
+                    <li
+                    *ngIf="musiker.vorstandtype1==2 || musiker.vorstandtype2==2"
+                    >
+                        {{musiker.name}}
+                    </li>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>1. Beisitzer</td>
+            <td>
+                <a
+                    *ngFor="let musiker of musikers"
+                >
+                    <li
+                    *ngIf="musiker.vorstandtype1==3 || musiker.vorstandtype2==3"
+                    >
+                        {{musiker.name}}
+                    </li>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>Schriftführerin</td>
+            <td>
+                <a
+                    *ngFor="let musiker of musikers"
+                >
+                    <li
+                    *ngIf="musiker.vorstandtype1==4 || musiker.vorstandtype2==4"
+                    >
+                        {{musiker.name}}
+                    </li>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>Kassenwart</td>
+            <td>
+                <a
+                    *ngFor="let musiker of musikers"
+                >
+                    <li
+                    *ngIf="musiker.vorstandtype1==5 || musiker.vorstandtype2==5"
+                    >
+                        {{musiker.name}}
+                    </li>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>Notenwart</td>
+            <td>
+                <a
+                    *ngFor="let musiker of musikers"
+                >
+                    <li
+                    *ngIf="musiker.vorstandtype1==6 || musiker.vorstandtype2==6"
+                    >
+                        {{musiker.name}}
+                    </li>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>Jugendwart</td>
+            <td>
+                <a
+                    *ngFor="let musiker of musikers"
+                >
+                    <li
+                    *ngIf="musiker.vorstandtype1==7 || musiker.vorstandtype2==7"
+                    >
+                        {{musiker.name}}
+                    </li>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>Hausmeister</td>
+            <td>
+                <a
+                    *ngFor="let musiker of musikers"
+                >
+                    <li
+                    *ngIf="musiker.vorstandtype1==8 || musiker.vorstandtype2==8"
+                    >
+                        {{musiker.name}}
+                    </li>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>Sachwart</td>
+            <td>
+                <a
+                    *ngFor="let musiker of musikers"
+                >
+                    <li
+                    *ngIf="musiker.vorstandtype1==9 || musiker.vorstandtype2==9"
+                    >
+                        {{musiker.name}}
+                    </li>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>Beisitzer</td>
+            <td>
+                <a
+                    *ngFor="let musiker of musikers"
+                >
+                    <li
+                    *ngIf="musiker.vorstandtype1==10 || musiker.vorstandtype2==10"
+                    >
+                        {{musiker.name}}
+                    </li>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>

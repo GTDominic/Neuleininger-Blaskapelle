@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MusikerService } from '../services/musiker.service';
 
 @Component({
   selector: 'app-vorstand',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VorstandComponent implements OnInit {
 
-  constructor() { }
+  musikers: any;
+
+  constructor(private musikerService: MusikerService) { }
 
   ngOnInit() {
+    this.getMusiker();
+  }
+
+  getMusiker() {
+    this.musikerService.getMusiker()
+      .subscribe(
+        data => {
+          this.musikers = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
   }
 
 }
