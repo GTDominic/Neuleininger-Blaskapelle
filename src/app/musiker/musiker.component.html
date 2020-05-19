@@ -1,1 +1,22 @@
-<p>musiker works!</p>
+<div class="text absatz">
+    <table>
+        <tr
+            *ngFor="let instrument of instruments"
+        >
+            <td>
+                {{instrument.name}}
+            </td>
+            <td>
+                <a
+                    *ngFor="let musiker of musikers"
+                >
+                    <li
+                        *ngIf="musiker.instrumentid==instrument.id"
+                    >
+                        {{musiker.name}}
+            </li>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
