@@ -7,7 +7,7 @@ const baseUrl = config.ServerUrl + '/api/';
 @Injectable({
   providedIn: 'root'
 })
-export class MusikerService {
+export class AuftritteService {
 
   constructor(private http: HttpClient) {}
 
