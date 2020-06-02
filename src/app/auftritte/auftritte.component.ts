@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTable } from '@angular/material';
+import { Component, OnInit } from '@angular/core';
 import { AuftritteService } from '../services/auftritte.service';
 
 @Component({
@@ -10,11 +9,10 @@ import { AuftritteService } from '../services/auftritte.service';
 export class AuftritteComponent implements OnInit {
 
   actauftritte: any;
-
-  // @ViewChild(MatTable) table: MatTable<any>;
+  displayedColumns = ['location', 'event'];
 
   constructor(private auftritteService: AuftritteService) { }
-  
+
   ngOnInit() {
     this.getAuftritte();
   }
@@ -25,7 +23,6 @@ export class AuftritteComponent implements OnInit {
         data => {
           this.actauftritte = data;
           console.log(data);
-          // this.table.renderRows();
         },
         error => {
           console.log(error);
