@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AuftritteService } from '../services/auftritte.service';
 
 export interface AuftritteInterface {
-  ort?: String;
-  event?: String;
-  date?: String;
-  start?: String;
-  end?: String;
+  ort: string;
+  event: string;
+  date: string;
+  start: string;
+  end: string;
 }
 
 @Component({
@@ -18,9 +18,9 @@ export interface AuftritteInterface {
 export class AuftritteComponent implements OnInit {
 
   dbauftritte: any;
-  actauftritte = {} as Array<AuftritteInterface>;
-  
-  displayedColumns = ['location', 'event','start'];
+  actauftritte: AuftritteInterface[] = [];
+
+  displayedColumns = ['location', 'event', 'start'];
 
   constructor(private auftritteService: AuftritteService) { }
 
@@ -33,16 +33,20 @@ export class AuftritteComponent implements OnInit {
       .subscribe(
         data => {
           this.dbauftritte = data;
-          console.log(data);
-          this.actauftritte.length = this.dbauftritte.length;
-          
-          // for(let i = 0; i < this.dbauftritte.length; i++){
-          //   this.actauftritte[i].ort = this.dbauftritte[i].location;
-          //   console.log(this.actauftritte);
-          // }
+          console.log(this.dbauftritte);
+          // tslint:disable-next-line:prefer-for-of
+          for (let i = 0; i < this.dbauftritte.length; i++) {
+            this.actauftritte.push({
+              ort: this.dbauftritte[i].location,
+              event: this.dbauftritte[i].name,
+              date: '3',
+              start: '4',
+              end: '5'
+            });
+          }
         },
         error => {
           console.log(error);
-        });    
+        });
   }
 }
