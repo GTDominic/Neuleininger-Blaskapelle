@@ -1,1 +1,35 @@
-<p>auftritte works!</p>
+<div class="text">
+  <input atp-time-picker value="19:00"/>
+  <input [matDatepicker]="myDatepicker">
+  <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
+  <mat-datepicker #myDatepicker></mat-datepicker>
+  <div class="absatz" id="table">
+    <mat-spinner *ngIf="showtable == false"></mat-spinner>
+    <mat-table #table *ngIf="showtable == true" [dataSource]=actauftritte>
+
+      <ng-container matColumnDef="ort">
+        <th mat-header-cell *matHeaderCellDef>Ort</th>
+        <td mat-cell *matCellDef="let element"> {{element.ort}} </td>
+      </ng-container>
+      <ng-container matColumnDef="event">
+        <th mat-header-cell *matHeaderCellDef>Veranstaltung</th>
+        <td mat-cell *matCellDef="let element"> {{element.event}} </td>
+      </ng-container>
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Datum</th>
+        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+      </ng-container>
+      <ng-container matColumnDef="start">
+        <th mat-header-cell *matHeaderCellDef>Start</th>
+        <td mat-cell *matCellDef="let element"> {{element.start}} </td>
+      </ng-container>
+      <ng-container matColumnDef="end">
+        <th mat-header-cell *matHeaderCellDef>Ende</th>
+        <td mat-cell *matCellDef="let element"> {{element.end}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </mat-table>
+  </div>
+</div>

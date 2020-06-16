@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './MaterialModule';
 import { HttpClientModule } from '@angular/common/http';
+import { AmazingTimePickerModule } from 'amazing-time-picker';
+import { LOCALE_ID } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,9 +32,10 @@ import { VorstandComponent } from './vorstand/vorstand.component';
     MaterialModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    AmazingTimePickerModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'de-DE' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
